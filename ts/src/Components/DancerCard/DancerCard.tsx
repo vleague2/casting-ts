@@ -14,7 +14,7 @@ interface IProps {
 
 const DancerCard = (props: IProps) => (
     <div className={`card horizontal ${props.bg}`}>
-        <ul className="collapsible">
+        <ul className="collapsible expandable">
             <li>
                 <div className="row row-dancer">
                     <div className="col s3">
@@ -24,9 +24,11 @@ const DancerCard = (props: IProps) => (
                         <p className="dancer-name">{props.name}</p>
                     </div>
                     <div className="col s3 right-align">
-                        <a className="btn-small btn-floating black collapsible-header center-align">
-                            <i className="material-icons center-align">+</i>
-                        </a>
+                        {/* <span className="collapsible-header"> */}
+                            <a className="btn-small btn-floating black collapsible-header">
+                                <i className="material-icons">add</i>
+                            </a>
+                        {/* </span> */}
                     </div>
                 </div> 
                 <div className="row row-collapsible collapsible-body">

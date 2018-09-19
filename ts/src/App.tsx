@@ -1,12 +1,12 @@
 import * as React from "react";
 import "./App.css";
-import Sidebar from "./Components/Sidebar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import DancerCard from "./Components/DancerCard/DancerCard";
 import DanceCard from "./Components/DanceCard/DanceCard";
 import dancerData from "./dancers";
 import danceData from "./dances";
 
-interface IProps {}
+interface IProps {};
 
 interface IDancer {
   num: string,
@@ -40,10 +40,11 @@ class App extends React.Component<IProps, IState> {
 
   componentDidMount(): void {
     // to init collapsibles
-    // document.addEventListener('DOMContentLoaded', function() {
-    //   var elems = document.querySelectorAll('.collapsible');
-    //   var instances = window.M.Collapsible.init(elems);
-    // });
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.collapsible.expandable');
+      var instances = M.Collapsible.init(elems, {accordion: false});
+      console.log(instances);
+    });
   }
 
   render() {

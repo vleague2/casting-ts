@@ -11,6 +11,12 @@ ul, li {
     margin: 0px;
 }
 
+.collapsible-header {
+    border: none;
+    display: inline-block;
+    padding-left: 1px;
+}
+
 .row-dancer, .row-extra-info, .row-collapsible {
     width: 90%;
     margin-bottom: 0rem;
